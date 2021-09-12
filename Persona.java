@@ -1,15 +1,11 @@
 import java.util.*;
-/**
- * Esta clase muestra los datos de las personas para luego visualizarlo
- * 
- * @author Abrahan Ramirez Ulises Alejandro.
- * @version 1.0 (26/08/19).
- */
+
 public class Persona{
     private int nroDni;
     private String nombre;
     private String apellido;
     private int anioNacimiento;
+    private Calendar fechaNacimiento;
 
    /**
     * Encapsulamiento del atributo dni.
@@ -19,13 +15,7 @@ public class Persona{
         this.nroDni=p_dni;
     }
     
-    /**
-    * Encapsulamiento del atributo anioNacimiento.
-    * @param recibe un parametro int p_anio.
-    */
-    private void setAnioNacimiento(int p_anio){
-        this.anioNacimiento=p_anio;
-    }
+   
     
     /**
     * Encapsulamiento del atributo nombre.
@@ -42,6 +32,7 @@ public class Persona{
     private void setApellido(String p_apellido){
         this.apellido=p_apellido;
     }
+
 
     /**
     * Retorna el valor de la variable.
@@ -68,6 +59,16 @@ public class Persona{
     public String getApellido(){
         return this.apellido;
     }
+     /**
+    * Encapsulamiento del atributo anioNacimiento.
+    * @param recibe un parametro int p_anio.
+    */
+    private void setAnioNacimiento(int p_anio){
+        Calendar fecha1 = Calendar.getInstance();
+        fecha1.set(p_anio,Calendar.MONTH,Calendar.DATE);
+        this.setFechaNacimiento(fecha1);
+        
+}
     
     /**
     * Retorna el valor de la variable.
@@ -76,6 +77,13 @@ public class Persona{
     */
     public int getAnioNacimiento(){
         return this.anioNacimiento;
+    }
+
+    private void setFechaNacimiento(Calendar p_fecha){
+        this.fechaNacimiento=p_fecha;
+    }
+    public Calendar getFechaNacimiento() {
+        return this.fechaNacimiento;
     }
 
 
@@ -94,13 +102,24 @@ public class Persona{
     }
 
     /**
+     * Ejercicio 9 constructor persona 
+     */
+    public Persona(int p_dni,String p_nombre, String p_apellido,Calendar p_fecha){
+        this.setnroDni(p_dni);
+        this.setNombre(p_nombre);
+        this.setApellido(p_apellido);
+        this.setFechaNacimiento(p_fecha);
+    }
+
+
+    /**
      * Calcula la edad.
      * @return devuelve entero 
      */
     public int edad(){
         Calendar fechaHoy = new GregorianCalendar();
         int anioHoy = fechaHoy.get(Calendar.YEAR);
-        int anios = anioHoy - this.getAnioNacimiento();
+        int anios = anioHoy - this.getFechaNacimiento().get(Calendar.YEAR);
         return anios;
     }
     
@@ -119,13 +138,19 @@ public class Persona{
     public String nomYApe(){
         return this.getNombre() + " " + this.getApellido();
     }
+
+    
+
+    
     
     /**
      * Este metodo muestra los datos: nombre y apellido , numero de dni y la edad.
      */
     public void mostrar(){
+        System.out.println("-----------INICIO--------------------");
         System.out.println("Los datos de la persona son: ");
-        System.out.println(this.nomYApe() + "\nDNI: "+this.getNroDni() +"\tEdad: "+this.edad() + " "+ "años");
+        System.out.println(this.nomYApe() + "\nDNI: "+this.getNroDni() +"\tEdad: " +  this.edad() + " "+ "años");
+        System.out.println("-------------FIN-------------------------");
     }
     
 }

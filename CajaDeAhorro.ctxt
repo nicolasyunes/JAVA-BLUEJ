@@ -1,0 +1,36 @@
+#BlueJ class context
+comment0.target=CajaDeAhorro
+comment1.params=titular\ nroCuenta\ saldo
+comment1.target=CajaDeAhorro(Persona,\ int,\ double)
+comment10.params=extraccionesPosibles
+comment10.target=void\ setExtraccionesPosibles(int)
+comment11.params=p_importe
+comment11.target=boolean\ puedeExtraer(double)
+comment11.text=\r\n\ verifica\ si\ puede\ o\ no\ realizar\ la\ extraccion\r\n\ @param\ p_importe\r\n\ @return\r\n
+comment12.params=p__importe
+comment12.target=void\ extraccion(double)
+comment12.text=\r\n\ metodo\ que\ efectiviza\ la\ operacion\ correspondiente.\r\n\ @param\ p__importe\r\n
+comment13.params=p_importe
+comment13.target=void\ extraer(double)
+comment13.text=\r\n\ Verifica\ si\ puede\ extraer\ el\ monto\ solicitado.\r\n\ En\ caso\ de\ puedeExtrer\ \=\=\ true,\ llama\ al\ metodo\ para\ realizar\ la\ extraccion.\r\n\ en\ caso\ de\ puedeExtraer\ \=\=\ false,\ se\ verifica\ que\ atributo\ no\ se\ verifica\ y\ envia\ el\ mensaje\ correspondiente\r\n\ por\ ultimo\ vuelve\ a\ llamar\ el\ metodo\ mostrar\ para\ tener\ informacion\ en\ \ cada\ solicitud;\r\n\ @param\ p_importe\r\n
+comment14.params=p_importe
+comment14.target=void\ depositar(double)
+comment15.params=
+comment15.target=void\ mostrar()
+comment2.params=titular\ nroCuenta
+comment2.target=CajaDeAhorro(Persona,\ int)
+comment3.params=
+comment3.target=Persona\ getTitular()
+comment4.params=titular
+comment4.target=void\ setTitular(Persona)
+comment5.params=
+comment5.target=int\ getNroCuenta()
+comment6.params=nroCuenta
+comment6.target=void\ setNroCuenta(int)
+comment7.params=
+comment7.target=double\ getSaldo()
+comment8.params=saldo
+comment8.target=void\ setSaldo(double)
+comment9.params=
+comment9.target=int\ getExtraccionesPosibles()
+numComments=16

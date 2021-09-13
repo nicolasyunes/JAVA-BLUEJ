@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=Hospital
+comment0.text=\r\n\ Descripcion\:\ en\ esta\ clase\ se\ pueden\ crearobjetos\ de\ la\ clase\ Hospital\ y\ mostrar\ los\ datos\ en\ pantalla\r\n\ \r\n\ @author\ Yunes\ Nicolas\r\n\ @version\ 2021\r\n
+comment1.params=p_nombreHospital\ p_nombreDirector
+comment1.target=Hospital(java.lang.String,\ java.lang.String)
+comment1.text=\r\n\ Descripcion\:\ constructor\ de\ la\ clase\ Hospital.\r\n\ @param\ p_nombreHospital,p_nombreDirector.\r\n
+comment2.params=p_nombreHospital
+comment2.target=void\ setNombreHospital(java.lang.String)
+comment2.text=\r\n\ Descripcion\:setter\ para\ atributos.\r\n\ Encapsulamiento.\r\n
+comment3.params=p_nombreDirector
+comment3.target=void\ setNombreDirector(java.lang.String)
+comment4.params=
+comment4.target=java.lang.String\ getNombreHospital()
+comment4.text=\r\n\ @return\ devuelve\ un\ valor\ de\ tipo\ String.\r\n
+comment5.params=
+comment5.target=java.lang.String\ getnombreDirector()
+comment5.text=\r\n\ @return\ devuelve\ un\ valor\ de\ tipo\ String.\r\n
+comment6.params=p_paciente
+comment6.target=void\ consultaDatosFiliatorios(Paciente)
+comment6.text=public\ void\ consultaDatosFiliatorios(Paciente\ p_paciente){\r\n\ \ \ \ \ \ \ \ System.out.println("Hospital\:\ "+this.getNombreHospital()+"\\tDirector\:\ "+this.getNombreDoctor());\r\n\ \ \ \ \ \ \ \ System.out.println("------------------------------------------------");\r\n\ \ \ \ \ \ \ \ System.out.println("Paciente\:\ "+p_paciente.getNombre()+"\\tHistoria\ Clinica\:\ "+p_paciente.getHistoriaClinica()+"\\tDomicilio\:\ "\r\n\ \ \ \ \ \ \ \ +p_paciente.getDomicilio());\r\n\ \ \ \ \ \ \ \ System.out.println("Localidad\:\ "+p_paciente.getLocalidadNacido()+"\\tProvincia\:\ "+p_paciente.getLocalidadVive());\r\n}
+numComments=7

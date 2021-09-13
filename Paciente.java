@@ -1,69 +1,108 @@
-public class Paciente {
+
+ 
+public class Paciente{
+    
     private int historiaClinica;
-    private String nombre; 
+    private String nombre;
     private String domicilio;
-    private Localidad p_localidadNacido;
-    private Localidad p_localidadVive;
-
-
-
-
-    public Paciente(int historiaClinica, String nombre, String domicilio, Localidad p_localidadNacido , Localidad p_localidadVive) {
-        setDomicilio(domicilio);
-        setHistoriaClinica(historiaClinica);
-        setNombre(nombre);
-        
+    private Localidad localidadNacido;
+    private Localidad localidadVive;
+    
+    /**
+     * Descripcion: constructor para los objetos de la clase Paciente
+     * @param p_historiaClinica,p_nombre, p_domicilio,p_localidadNacido,p_localidadVive
+     */
+    
+    public Paciente(int p_historiaClinica, String p_nombre, String p_domicilio, Localidad p_localidadNacido, Localidad p_localidadVive){
+        this.setHistoriaClinica(p_historiaClinica);
+        this.setNombre(p_nombre);
+        this.setDomicilio(p_domicilio);
+        this.setLocalidadNacido(p_localidadNacido);
+        this.setLocalidadVive(p_localidadVive);
     }
-
-    public Localidad getLocalidadNacido() {
-        return this.p_localidadNacido;
+    
+    /**
+     * Descripcion:setter para atributos.
+     * Encapsulamiento.
+     */
+    
+    private void setHistoriaClinica(int p_historiaClinica){
+        this.historiaClinica = p_historiaClinica;
     }
-
-    private void setLocalidadNacido(Localidad p_localidadNacido) {
-        this.p_localidadNacido = p_localidadNacido;
+    
+    private void setNombre(String p_nombre){
+        this.nombre = p_nombre;
+    }   
+    
+    private void setDomicilio(String p_domicilio){
+        this.domicilio = p_domicilio;
+    }  
+    
+    private void setLocalidadNacido(Localidad p_localidadNacido){
+        this.localidadNacido = p_localidadNacido;
+    }  
+    
+    private void setLocalidadVive(Localidad p_localidadVive){
+        this.localidadVive = p_localidadVive;
     }
-
-    public Localidad getLocalidadVive() {
-        return this.p_localidadVive;
-    }
-
-    private void setLocalidadVive(Localidad p_localidadVive) {
-        this.p_localidadVive = p_localidadVive;
-    }
-
-
-    public int getHistoriaClinica() {
+    
+     /**
+    * descripcion: getter para los atributos
+    */
+   
+    /**
+     * @return devuelve un valor de tipo entero
+     */
+    public int getHistoriaClinica(){
         return this.historiaClinica;
     }
-
-    private void setHistoriaClinica(int historiaClinica) {
-        this.historiaClinica = historiaClinica;
-    }
-
-    public String getNombre() {
+    
+    /**
+     * @return devuelve un valor de tipo String 
+     */
+    public String getNombre(){
         return this.nombre;
     }
-
-    private void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getDomicilio() {
+    
+    /**
+     * @return un valor de tipo  String
+     */
+    public String getDomicilio(){
         return this.domicilio;
     }
-
-    private void setDomicilio(String domicilio) {
-        this.domicilio = domicilio;
+    
+    /**
+     * @return devuelve un valor de tipo Localidad.
+     */
+    public Localidad getLocalidadNacido(){
+        return this.localidadNacido;
     }
-
-    public  String cadenaDeDatos() {
-        return (this.getNombre() + "......" + this.getHistoriaClinica() + "-......" + this.getDomicilio() + " ..." + this.getLocalidadNacido().getNombre() + " - " + this.getLocalidadNacido().getProvincia() );
+    
+    /**
+     * @return devuelve un valor de tipo Localidad.
+     */
+    public Localidad getLocalidadVive(){
+        return this.localidadVive;
     }
-
-    public void mostrarDatosPantalla() {
-        System.out.println("Paciente: " + this.getNombre() + "Historia Clinica: " + this.getHistoriaClinica() + "Domicilio: " + this.getDomicilio());
-        this.getLocalidadNacido().mostrar();
+    
+    /**
+     * Descripcion: muestra los datos de un paciente en pantalla
+     */
+    
+    public void mostrarDatosPantalla(){
+        System.out.println("Paciente: "+this.getNombre()+"\t Historia Clinica: "+this.getHistoriaClinica()+"\tDomicilio: "
+        +this.getDomicilio());
+        System.out.println("Localidad: "+this.getLocalidadNacido().getNombre()+"\t Provincia: "+this.getLocalidadVive().getProvincia());
     }
-
-
+    
+    /**
+     * Descripcion: muestra los datos de un paciente pero en una sola linea
+     */
+    
+    public String cadenaDeDatos(){
+        return this.getNombre()+"\t"+this.getHistoriaClinica()+"\t"+this.getDomicilio()+"\t"+this.getLocalidadNacido().getNombre()+"\t"+
+        this.getLocalidadVive().getProvincia();
+    }
+    
+    
 }
